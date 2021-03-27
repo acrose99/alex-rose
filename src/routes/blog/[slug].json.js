@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
 import marked from "marked";
-import hljs from "highlight.js";
+// import hljs from "highlight.js";
 
 const getPost = fileName =>
 	fs.readFileSync(path.resolve("content/writing", `${fileName}.md`), "utf-8");

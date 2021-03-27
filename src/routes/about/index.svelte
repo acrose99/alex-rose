@@ -1,49 +1,15 @@
 <script lang="ts">
-	import dayjs from 'dayjs';
-
-	import {events} from './events.json'
 	import Timeline from "../../components/Timeline.svelte";
-
-	export let isPast: boolean = false;
-
-	const sortedFutureEvents = events["future"]
-			.sort((a, b) => {
-				if (a["date"] < b["date"]) return 1;
-				else return -1;
-			});
-	const sortedPastEvents = events["past"]
-			.sort((a, b) => {
-				if (a["dateStart"] < b["dateStart"]) return 1;
-				else return -1;
-			});
-	const sortedCurrentEvents = events["current"]
-			.sort((a, b) => {
-				if (a["date"] < b["date"]) return 1;
-				else return -1;
-			});
 </script>
 
 <style>
-	h1,h2, figure, p {
+	h1,p {
 		text-align: center;
 		color: var(--text);
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	h1,h2 {
+	h1 {
 		color: var(--primary);
-	}
-	span {
-		color: var(--secondary);
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
 	}
 	p {
 		color: var(--text);
@@ -53,6 +19,17 @@
 <svelte:head>
 	<title>Bio</title>
 </svelte:head>
+
+<h1>Bio</h1>
+
+<p> I'm a junior studying Computer Science and History at Loyola University Chicago.</p>
+
+<p>I'm also a Mulcahy Fellow at the Software Systems Laboratory.</p>
+
+<p>I used to work as a IT Technician for the Loyola Service Desk and now I'm looking for another job that's more about coding</p>
+
+<p>Check out my portfolio, my stack, my bio/resume, or my blog if you want to stay awhile</p>
+
 
 <h1>Brief Timeline</h1>
 <Timeline/>

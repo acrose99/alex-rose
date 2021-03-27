@@ -1,5 +1,5 @@
 ---
-header: Backend
+header: Frontend
 leftImg: logos_javascript.svg
 rightImg: logos_react.svg
 ---

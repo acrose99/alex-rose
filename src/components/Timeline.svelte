@@ -3,7 +3,7 @@
 
     import {events} from '../routes/about/events.json'
 
-    export let isPast: boolean = false;
+    export const isPast: boolean = false;
 
     const sortedFutureEvents = events["future"]
         .sort((a, b) => {
@@ -23,29 +23,15 @@
 </script>
 
 <style>
-    h1,h2, figure, p {
+    h2, p {
         text-align: center;
         color: var(--text);
     }
-
-    figure {
-        margin: 0 0 1em 0;
-    }
-
-    img {
-
-    }
-    h1,h2 {
+    h2 {
         color: var(--primary);
     }
     span {
         color: var(--secondary);
-    }
-
-    @media (min-width: 480px) {
-        h1 {
-            font-size: 4em;
-        }
     }
     p {
         color: var(--text);
