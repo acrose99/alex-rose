@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
 	import Nav from '../components/Nav.svelte';
 
-	export let segment;
+	export let segment: string;
 </script>
 
 <style>
 	main {
 		position: relative;
-		max-width: 56em;
-		background-color: white;
+		background-color: var(--background);
 		padding: 2em;
+		min-height: 100vh;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

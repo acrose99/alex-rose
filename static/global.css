@@ -1,36 +1,66 @@
-body {
-	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	color: #333;
-}
+:root {
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
-}
 
-h1 {
-	font-size: 2em;
-}
+    /* General Colors */
+    --amethyst: #b83bfa;
+    --crimson: #DA103F;
+    --elm: #1D8991;
+    --thunderbird: #DC3318;
+    --tango: #F6661E;
+    --jaffa: #F77D26;
+    --black: #333333;
 
-a {
-	color: inherit;
-}
+    /* General UI Elements */
+    --shadow: #16161C;
+    --border: #000000;
+    --positive: #07DA8C;
+    --negative: #F43E5C;
+    --warning: #1EB980;
+    --modified: #21BFC2;
+    --lightText: #D5D8DA;
+    --darkText: #06060C;
 
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
-}
+    /* Light Mode Variables Only */
+    --primaryLight: #e84a7f;
+    --secondaryLight: #f48fb1;
+    --backgroundLight: #f5f5f6;
+    --backgroundAltLight: #e1e2e1;
+    --accentLight: #b10053;
+    --accentAltLight: #c2185b;
 
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
+
+    /* Dark Mode Variables Only */
+    --primaryDark: #b10053;
+    --secondaryDark: #2cb3b4;
+    --backgroundDark: #1c1e26;
+    --backgroundAltDark: #232530;
+    --accentDark: #2E303E;
+    --accentAltDark: #6C6F93;
+}
+.dark {
+    --background: var(--backgroundDark);
+    --background-hover: var(--backgroundAltDark);
+    --background-item: var(--backgroundAltDark);
+    --background-item-outline: var(--accentAltDark);
+    --text: var(--lightText);
+    --primary: var(--primaryDark);
+    --primary-hover: var(--accentAltDark);
+    --secondary: var(--secondaryDark);
+    --secondary-text: var(--lightText);
+    --button: var(--accentDark);
+    --green: #09F7A0;
+}
+.bright {
+    --background: var(--backgroundLight);
+    --background-hover: var(--backgroundAltLight);
+    --background-item: var(--secondaryLight);
+    --background-item-outline: var(--accentLight);
+    --text: var(--darkText);
+    --primary: var(--primaryLight);
+    --primary-hover: var(--accentLight);
+    --secondary: var(--secondaryLight);
+    --secondary-text: var(--darkText);
+    --button: var(--accentLight);
+    --green: #048c62;
+
 }

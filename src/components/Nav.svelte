@@ -1,10 +1,13 @@
-<script>
-	export let segment;
+<script lang="ts">
+	import DarkModeButton from "./DarkModeButton.svelte";
+
+	export let segment: string;
 </script>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		border-bottom: 1px solid var(--border);
+		background: var(--background-item);
 		font-weight: 300;
 		padding: 0 1em;
 	}
@@ -34,14 +37,15 @@
 	[aria-current]::after {
 		position: absolute;
 		content: '';
-		width: calc(100% - 1em);
+		width: calc(100% - .75em);
 		height: 2px;
-		background-color: rgb(255,62,0);
+		background-color: var(--primary);
 		display: block;
 		bottom: -1px;
 	}
 
 	a {
+		color: var(--secondary-text);
 		text-decoration: none;
 		padding: 1em 0.5em;
 		display: block;
@@ -50,11 +54,13 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Home</a></li>
+		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a></li>
+		<li><a rel=prefetch aria-current="{segment === 'stack' ? 'page' : undefined}" href="stacks">Stack</a></li>
+		<DarkModeButton/>
 	</ul>
 </nav>

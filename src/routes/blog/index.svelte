@@ -1,19 +1,28 @@
-<script context="module">
+<script context="module" lang="ts">
 	export function preload() {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+		return this.fetch(`blog.json`).then((r: { json: () => any; }) => r.json()).then((posts: { slug: string; title: string, html: any }[]) => {
 			return { posts };
 		});
 	}
 </script>
 
-<script>
-	export let posts;
+<script lang="ts">
+	export let posts: { slug: string; title: string, html: any }[];
 </script>
 
 <style>
+	h1 {
+		text-align: center;
+		color: var(--primary);
+	}
 	ul {
 		margin: 0 0 1em 0;
-		line-height: 1.5;
+		font-size: 1.5em;
+		color: var(--secondary);
+	}
+	a {
+		color: var(--secondary);
+		text-decoration-color: var(--background-item-outline);
 	}
 </style>
 

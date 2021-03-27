@@ -6,6 +6,9 @@ import url from '@rollup/plugin-url';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
+import json from '@rollup/plugin-json'
+import sveltePreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -16,11 +19,12 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 const onwarn = (warning, onwarn) =>
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
+	(warning.code === 'THIS_IS_UNDEFINED') ||
 	onwarn(warning);
 
 export default {
 	client: {
-		input: config.client.input(),
+		input: config.client.input().replace(/\.js$/, '.ts'),
 		output: config.client.output(),
 		plugins: [
 			replace({
@@ -31,6 +35,7 @@ export default {
 				},
 			}),
 			svelte({
+				preprocess: sveltePreprocess({ sourceMap: dev }),
 				compilerOptions: {
 					dev,
 					hydratable: true
@@ -44,7 +49,10 @@ export default {
 				browser: true,
 				dedupe: ['svelte']
 			}),
+			json({
+			}),
 			commonjs(),
+			typescript({ sourceMap: dev }),
 
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -73,7 +81,7 @@ export default {
 	},
 
 	server: {
-		input: config.server.input(),
+		input: { server: config.server.input().server.replace(/\.js$/, ".ts") },
 		output: config.server.output(),
 		plugins: [
 			replace({
@@ -84,6 +92,7 @@ export default {
 				},
 			}),
 			svelte({
+				preprocess: sveltePreprocess({ sourceMap: dev }),
 				compilerOptions: {
 					dev,
 					generate: 'ssr',
@@ -99,7 +108,10 @@ export default {
 			resolve({
 				dedupe: ['svelte']
 			}),
-			commonjs()
+			json({
+			}),
+			commonjs(),
+			typescript({ sourceMap: dev })
 		],
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 		preserveEntrySignatures: 'strict',
@@ -107,7 +119,7 @@ export default {
 	},
 
 	serviceworker: {
-		input: config.serviceworker.input(),
+		input: config.serviceworker.input().replace(/\.js$/, '.ts'),
 		output: config.serviceworker.output(),
 		plugins: [
 			resolve(),
@@ -119,6 +131,7 @@ export default {
 				},
 			}),
 			commonjs(),
+			typescript({ sourceMap: dev }),
 			!dev && terser()
 		],
 		preserveEntrySignatures: false,
