@@ -1,7 +1,7 @@
 <script lang="ts">
     import HistoryOfComputingSVG from "./SVGS/HistoryOfComputingSVG.svelte";
 
-    export let icon;
+    export let icon: string;
     import DiJavascript1 from 'svelte-icons/di/DiJavascript1.svelte'
     import DiMongodb from 'svelte-icons/di/DiMongodb.svelte'
     import DiNodejsSmall from 'svelte-icons/di/DiNodejsSmall.svelte'

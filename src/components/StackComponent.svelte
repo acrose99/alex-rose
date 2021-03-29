@@ -44,14 +44,6 @@
         overflow: hidden;
         margin-top: 5%;
     }
-
-    .iconify {
-        height: 40px;
-        width: 40px;
-        display: block;
-        margin: 25% auto;
-    }
-
     .rectangle-text {
         width: 80%;
         text-align: center;

@@ -15,7 +15,7 @@
 		height: 200px;
 		display: block;
 	}
-	p,h3 {
+	h3 {
 		text-align: center;
 		color: var(--text)
 	}

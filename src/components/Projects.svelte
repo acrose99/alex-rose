@@ -13,6 +13,7 @@
 
     export let projects: {
         header: string;
+        ref: string;
         textColor: string;
         backdrop: string;
         leftImg: string;
