@@ -61,4 +61,65 @@
     .rectangle:hover {
         background-color: var(--background-hover);
     }
+    /* Media Queries from here on out */
+    @media screen and (min-width: 360px) {
+        .rectangle {
+            width: 300px;
+            height: 90px;
+        }
+        .rectangle-text {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    }
+
+    /*iPhone 6,7,8, X*/
+    @media screen and (min-width: 375px) {
+        .rectangle {
+            width: 320px;
+            height: 90px;
+        }
+        .rectangle-text {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    }
+
+    /*iPhone Plus, XS, XS Max */
+    @media screen and (min-width: 414px) {
+        .rectangle {
+            width: 380px;
+            height: 90px;
+        }
+
+        .rectangle-text {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    }
+
+    /* iPad */
+    @media screen and (min-width: 768px) {
+        .rectangle {
+            width: 650px;
+            height: 80px;
+        }
+        .rectangle-text {
+            font-size: 24px;
+            width: 80%;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .rectangle {
+            width: 900px;
+            height: 80px;
+        }
+
+        .rectangle-text {
+            font-size: 24px;
+            width: 80%;
+        }
+    }
+
 </style>

@@ -17,11 +17,14 @@
         color: var(--secondary);
         text-align: center;
     }
+    a {
+        color: var(--secondary);
+    }
 </style>
 
 <h2><a href="/projects">Projects</a></h2>
 {#each projects as project}
-    <h3>{project["Project"]}
+    <h3><a href={project["ref"]}>{project["Project"]}</a>
         <span>(Languages:</span>
         {#each project["languages"] as language}
             {#if project["languages"].indexOf(language) !== (project["languages"].length -1) }
