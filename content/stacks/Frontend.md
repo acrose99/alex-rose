@@ -1,7 +1,7 @@
 ---
 header: Frontend
-leftImg: logos_javascript.svg
-rightImg: logos_react.svg
+leftImg: Javascript
+rightImg: React
 ---
 
 In regards to the real code, I primarily use vanilla Javascript or ReactJS.

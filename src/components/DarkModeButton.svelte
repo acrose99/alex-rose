@@ -89,7 +89,7 @@
     button > div {
         height: 1.25rem;
         width: 1.25rem;
-        color: var(--secondary-text);
+        color: var(--text);
     }
 
     @media screen and (max-width: 600px) {

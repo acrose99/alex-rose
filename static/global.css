@@ -17,15 +17,15 @@
     --negative: #F43E5C;
     --warning: #1EB980;
     --modified: #21BFC2;
-    --lightText: #D5D8DA;
-    --darkText: #06060C;
+    --lightText: #d0d0d0;
+    --darkText: #06060c;
 
     /* Light Mode Variables Only */
     --primaryLight: #e84a7f;
-    --secondaryLight: #f48fb1;
-    --backgroundLight: #f5f5f6;
+    --secondaryLight: #ef7f7e;
+    --backgroundLight: #fdf0ec;
     --backgroundAltLight: #e1e2e1;
-    --accentLight: #b10053;
+    --accentLight: #fce5df;
     --accentAltLight: #c2185b;
 
 
@@ -35,7 +35,7 @@
     --backgroundDark: #1c1e26;
     --backgroundAltDark: #232530;
     --accentDark: #2E303E;
-    --accentAltDark: #6C6F93;
+    --accentAltDark: #38384a;
 }
 .dark {
     --background: var(--backgroundDark);
@@ -46,7 +46,7 @@
     --primary: var(--primaryDark);
     --primary-hover: var(--accentAltDark);
     --secondary: var(--secondaryDark);
-    --secondary-text: var(--lightText);
+    --secondary-text: var(--darkText);
     --button: var(--accentDark);
     --green: #09F7A0;
 }
@@ -57,9 +57,9 @@
     --background-item-outline: var(--accentLight);
     --text: var(--darkText);
     --primary: var(--primaryLight);
-    --primary-hover: var(--accentLight);
+    --primary-hover: var(--accentAltLight);
     --secondary: var(--secondaryLight);
-    --secondary-text: var(--darkText);
+    --secondary-text: var(--lightText);
     --button: var(--accentLight);
     --green: #048c62;
 

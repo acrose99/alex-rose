@@ -1,17 +1,19 @@
 <script>
     import Icon from "./Icon.svelte";
-    export let header; export let leftImg; export let rightImg;
+    export let header; export let leftImg; export let rightImg; export let ref;
 </script>
 
-<div class="rectangle" style="transition: all 1.3s ease 0s">
+<div class="rectangle" style="transition: all 2s ease 0s">
     <div class="inner-rectangle-left" style="transition: all 2s ease 0s">
         <div class="inner-rectangle-svg">
-            <Icon icon={leftImg}/>
+            <div class="iconify">
+                <Icon icon={leftImg}/>
+            </div>
         </div>
     </div>
-    <p class="rectangle-text">
+    <a class="rectangle-text" href={ref}>
         {header}
-    </p>
+    </a>
     <div class="inner-rectangle-right" style="transition: all 2s ease 0s" >
         <div class="inner-rectangle-svg">
             <Icon icon={rightImg}/>
@@ -46,10 +48,9 @@
     }
 
     .iconify {
-        height: 40px;
-        width: 40px;
+        height: 64px;
+        width: 64px;
         display: block;
-        margin: 25% auto;
     }
 
     .rectangle-text {
@@ -67,6 +68,6 @@
         pointer-events: auto;
     }
     .rectangle:hover {
-        background-color: var(--background-hover);
+        background-color: var(--primary-hover);
     }
 </style>

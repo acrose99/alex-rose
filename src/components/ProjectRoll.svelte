@@ -19,7 +19,7 @@
     }
 </style>
 
-<h2>Projects</h2>
+<h2><a href="/projects">Projects</a></h2>
 {#each projects as project}
     <h3>{project["Project"]}
         <span>(Languages:</span>

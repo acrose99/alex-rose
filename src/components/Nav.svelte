@@ -35,7 +35,8 @@
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'stack' ? 'page' : undefined}" href="stacks">Stack</a></li>
+		<li><a rel=prefetch aria-current="{segment === 'stack' ? 'page' : undefined}" href="stacks">Stack/Skills</a></li>
+		<li><a rel=prefetch aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">Projects</a></li>
 		<DarkModeButton on:message={handleThemeChange}/>
 	</ul>
 </nav>
@@ -88,7 +89,7 @@
 	}
 
 	a {
-		color: var(--secondary-text);
+		color: var(--text);
 		text-decoration: none;
 		padding: 1em 0.5em;
 		display: block;

@@ -1,7 +1,7 @@
 ---
 header: Backend
-leftImg: mongo.svg
-rightImg: logos_javascript.svg
+leftImg: MongoDB
+rightImg: Node
 ---
 
 I have experience with hosting and integrating both SQL, noSQL, and of course REST APIs for websites. (which you can see below in my portfolio).

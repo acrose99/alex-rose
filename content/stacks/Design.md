@@ -1,7 +1,7 @@
 ---
 header: Design
-leftImg: Figma.svg
-rightImg: CSS.svg
+leftImg: Figma
+rightImg: CSS
 ---
 
 For design, I use Figma to prototype and create wireframes, and then (obviously) use CSS on the actual site.

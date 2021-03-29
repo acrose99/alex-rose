@@ -1,7 +1,7 @@
 ---
 header: Misc
-leftImg: bash.svg
-rightImg: logos_python.svg
+leftImg: Terminal
+rightImg: Python
 ---
 I am also intermediate with Python, particularly working with data using APIs.
 
