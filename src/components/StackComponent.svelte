@@ -44,6 +44,7 @@
         overflow: hidden;
         margin-top: 5%;
     }
+
     .rectangle-text {
         width: 80%;
         text-align: center;
@@ -59,7 +60,7 @@
         pointer-events: auto;
     }
     .rectangle:hover {
-        background-color: var(--background-hover);
+        background-color: var(--primary-hover);
     }
     /* Media Queries from here on out */
     @media screen and (min-width: 360px) {

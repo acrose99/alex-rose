@@ -2,7 +2,7 @@
 	import logoBright from 'images/BrightRose.svg';
 	import logoDark from 'images/DarkRose.svg';
 	import DarkModeButton from "./DarkModeButton.svelte";
-
+	import DiGithubAlt from 'svelte-icons/di/DiGithubAlt.svelte'
 	export let segment: string;
 	let src: string;
 
@@ -29,16 +29,19 @@
 	<!--{/if}-->
 	<img {src} alt="">
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a></li>
+		<li><a class="link" aria-current="{segment === undefined ? 'page' : undefined}" href=".">Home</a></li>
+		<li><a class="link" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'stack' ? 'page' : undefined}" href="stacks">Stack/Skills</a></li>
-		<li><a rel=prefetch aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">Projects</a></li>
-		<DarkModeButton on:message={handleThemeChange}/>
+		<li><a class="link" rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a></li>
+		<li><a class="link" rel=prefetch aria-current="{segment === 'stacks' ? 'page' : undefined}" href="stacks">Stack/Skills</a></li>
+		<li><a class="link" rel=prefetch aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">Projects</a></li>
 	</ul>
+	<DarkModeButton on:message={handleThemeChange}/>
+	<div class="linkImg">
+		<a style="color: var(--text)" href="https://github.com/acrose99/alex-rose"><DiGithubAlt/></a>
+	</div>
 </nav>
 <style>
 	nav {
@@ -46,19 +49,14 @@
 		background: var(--background-item);
 		font-weight: 300;
 		padding: 0 1em;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
-	}
-
-	img {
-		margin: 10px 25px;
-		height: 32px;
-		display: block;
-		float: left;
 	}
 
 	/* clearfix */
@@ -75,24 +73,54 @@
 
 	[aria-current] {
 		position: relative;
-		display: inline-block;
+		display: block;
 	}
 
 	[aria-current]::after {
 		position: absolute;
 		content: '';
-		width: calc(100% - .75em);
+		width: calc(100% - 1em);
 		height: 2px;
-		background-color: var(--primary);
+		background-color: var(--background-item-outline);
 		display: block;
 		bottom: -1px;
 	}
 
 	a {
-		color: var(--text);
+		cursor: pointer;
+	}
+
+	a.link {
 		text-decoration: none;
 		padding: 1em 0.5em;
+		margin: 0 1em;
 		display: block;
+		color: var(--text);
+	}
+
+	img {
+		height: 1.5em;
+		width: 1.5em;
+		margin-left: 1em;
+	}
+	.linkImg {
+		height: 2.5em;
+		width: 2.5em;
+		margin-left: 1em;
+	}
+
+	@media screen and (max-width: 600px) {
+		a.link {
+			font-size: 0.9em;
+			padding: 1em 0.5em;
+			margin: 0 0.125em;
+		}
+
+		img {
+			height: 1.25em;
+			width: 1.25em;
+			margin-left: 0.5em;
+		}
 	}
 </style>
 

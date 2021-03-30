@@ -22,7 +22,7 @@
     }
 </style>
 
-<h2><a href="/projects">Projects</a></h2>
+<h2><a style="color: var(--primary);" href="/projects">Projects</a></h2>
 {#each projects as project}
     <h3><a href={project["ref"]}>{project["Project"]}</a>
         <span>(Languages:</span>
