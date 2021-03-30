@@ -84,7 +84,7 @@
         cursor: pointer;
     }
     button:hover {
-        background: var(--background-hover);
+        background: var(--primary);
     }
     button > div {
         height: 1.25rem;

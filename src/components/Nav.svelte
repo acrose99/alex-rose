@@ -76,12 +76,15 @@
 		display: block;
 	}
 
+	li a:hover {
+		background: var(--primary);
+	}
+
 	[aria-current]::after {
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: var(--background-item-outline);
 		display: block;
 		bottom: -1px;
 	}
@@ -103,10 +106,14 @@
 		width: 1.5em;
 		margin-left: 1em;
 	}
+
 	.linkImg {
 		height: 2.5em;
 		width: 2.5em;
 		margin-left: 1em;
+	}
+	.linkImg:hover {
+		background: var(--primary);
 	}
 
 	@media screen and (max-width: 600px) {
