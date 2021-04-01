@@ -11,11 +11,16 @@
 <script lang="ts">
     import StackComponent from "./StackComponent.svelte";
     export let stacks: {
+        order: string;
         header: string;
         leftImg: string;
         rightImg: string;
         html: any;
     }[];
+    const sortedStacks = stacks.sort((a, b) => {
+        if (a.order > b.order) return 1;
+        else return -1;
+    });
 </script>
 
 <svelte:head>

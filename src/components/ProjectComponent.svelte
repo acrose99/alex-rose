@@ -44,13 +44,15 @@
     .inner-rectangle-svg {
         flex-grow: 1;
         overflow: hidden;
-        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        margin: 10%;
     }
 
     .iconify {
         height: 64px;
         width: 64px;
-        display: block;
+        display: flex;
     }
 
     .rectangle-text {

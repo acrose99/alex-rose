@@ -1,6 +1,7 @@
 ---
+order: 1
 header: History of Computing
-ref: https://acrose99.github.io/HistoryOfComputing/home
+ref: https://history-of-computing.vercel.app/timeline
 leftImg: HistoryOfComputing
 rightImg: React
 ---

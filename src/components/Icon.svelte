@@ -12,6 +12,8 @@
     import FaFigma from 'svelte-icons/fa/FaFigma.svelte'
     import PrettilierSVG from "./SVGS/PrettilierSVG.svelte";
     import FoodspectorSVG from "./SVGS/FoodspectorSVG.svelte";
+    import SvelteSVG from "./SVGS/SvelteSVG.svelte";
+    import DPSVG from "./SVGS/DPSVG.svelte";
 </script>
 
     {#if icon === 'React'}
@@ -46,6 +48,12 @@
         <div class="iconify">
         <FaFigma/>
         </div>
+         {:else if icon === 'Svelte'}
+        <div class="iconify">
+            <SvelteSVG/>
+        </div>
+
+
         {:else if icon === 'HistoryOfComputing'}
         <div class="iconify">
             <HistoryOfComputingSVG/>
@@ -54,10 +62,15 @@
         <div class="iconify">
             <PrettilierSVG/>
         </div>
+    {:else if icon === 'DP'}
+        <div class="iconify">
+            <DPSVG/>
+        </div>
         {:else if icon === 'FoodSpector'}
         <div id="foodspector">
             <FoodspectorSVG/>
         </div>
+
     {/if}
 <style>
     #foodspector {
@@ -70,6 +83,6 @@
         color: var(--primary);
         height: 64px;
         width: 64px;
-        margin: 2px;
-    }
+        display: flex;
+        margin: auto;    }
 </style>

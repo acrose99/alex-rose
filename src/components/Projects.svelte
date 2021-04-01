@@ -12,6 +12,7 @@
     import ProjectComponent from "./ProjectComponent.svelte";
 
     export let projects: {
+        order: string;
         header: string;
         ref: string;
         textColor: string;
@@ -20,13 +21,17 @@
         rightImg: string;
         html: any;
     }[];
+    const sortedProjects = projects.sort((a, b) => {
+        if (a.order > b.order) return 1;
+        else return -1;
+    });
 </script>
 
 <svelte:head>
     <title>Projects</title>
 </svelte:head>
 
-{#each projects as p}
+{#each sortedProjects as p}
 
     <ProjectComponent header={p.header} ref={p.ref} leftImg={p.leftImg} rightImg={p.rightImg}/>
     <p>

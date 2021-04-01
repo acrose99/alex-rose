@@ -1,4 +1,5 @@
 ---
+order: 3
 header: Design
 leftImg: Figma
 rightImg: CSS
