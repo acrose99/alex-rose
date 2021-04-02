@@ -53,8 +53,8 @@
 </h2>
 
 <h3>
-	Check out my <a href="/projects">projects</a>, <a href="/stacks">my skills/stack</a>, and if you want, <a href="/blog">my writings.</a>
-<!--	<a href="/art">or look at some cool artwork</a>.-->
+	Check out my <a href="/projects">projects</a>, <a href="/stacks">my skills/stack</a>, and if you want, <a href="/blog">my writings,</a>
+	<a href="/art">or some some cool artwork</a>.
 </h3>
 
 <StackRoll/>
