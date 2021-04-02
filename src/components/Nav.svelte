@@ -45,6 +45,7 @@
 		<li><a class="link" rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a></li>
 		<li><a class="link" rel=prefetch aria-current="{segment === 'stacks' ? 'page' : undefined}" href="stacks">Stack/Skills</a></li>
 		<li><a class="link" rel=prefetch aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">Projects</a></li>
+		<li><a class="link" rel=prefetch aria-current="{segment === 'projects' ? 'page' : undefined}" href="art">Art</a></li>
 	</ul>
 	<DarkModeButton on:message={handleThemeChange}/>
 	<div class="linkImg">
