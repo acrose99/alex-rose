@@ -1,7 +1,7 @@
 export const projects = [
     {
         "Project": "History of Computing",
-        "languages": ["React", "Figma"],
+        "languages": ["React"],
         "ref": "https://acrose99.github.io/HistoryOfComputing/home"
     },
     {
@@ -10,9 +10,9 @@ export const projects = [
         "ref": "https://acrose99.github.io/Foodspector/"
     },
     {
-        "Project": "Prettilier",
-        "languages": ["CSS", "Javascript"],
-        "ref": "https://github.com/acrose99/PrettiLier"
+        "Project": "Don't Panic!",
+        "languages": ["Svelte", "Sapper"],
+        "ref": "https://dont-panic-luc.github.io/"
     },
 ]
 

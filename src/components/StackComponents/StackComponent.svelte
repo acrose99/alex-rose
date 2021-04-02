@@ -1,23 +1,19 @@
 <script>
-    import Icon from "./Icon.svelte";
+    import Icon from "../Icon.svelte";
     export let header; export let leftImg; export let rightImg; export let ref;
 </script>
 
-<div class="rectangle" style="transition: all 2s ease 0s">
+<div class="rectangle">
     <div class="inner-rectangle-left" style="transition: all 2s ease 0s">
-        <div class="inner-rectangle-svg">
-            <div class="iconify">
-                <Icon icon={leftImg}/>
-            </div>
-        </div>
+        <Icon icon={leftImg}/>
     </div>
-    <a class="rectangle-text" href={ref}>
-        {header}
-    </a>
+    <div style="transition: all 2s ease 0s" class="rectangle-mid">
+        <a class="rectangle-text" href={ref}>
+            {header}
+        </a>
+    </div>
     <div class="inner-rectangle-right" style="transition: all 2s ease 0s" >
-        <div class="inner-rectangle-svg">
-            <Icon icon={rightImg}/>
-        </div>
+        <Icon icon={rightImg}/>
     </div>
 </div>
 
@@ -41,24 +37,16 @@
         box-sizing: border-box;
         pointer-events: auto;
     }
-    .inner-rectangle-svg {
-        flex-grow: 1;
-        overflow: hidden;
+    .rectangle-mid {
+        width: 80%;
         display: flex;
         justify-content: center;
-        margin: 10%;
     }
-
-    .iconify {
-        height: 64px;
-        width: 64px;
-        display: flex;
+    .rectangle-mid:hover {
+        background-color: var(--primary-hover);
     }
-
     .rectangle-text {
-        width: 80%;
         text-align: center;
-        margin-top: 25px;
         font-size: 24px;
         color: var(--text);
     }
@@ -68,9 +56,6 @@
         position: relative;
         box-sizing: border-box;
         pointer-events: auto;
-    }
-    .rectangle:hover {
-        background-color: var(--primary-hover);
     }
 
 
@@ -101,7 +86,7 @@
     /*iPhone Plus, XS, XS Max */
     @media screen and (min-width: 414px) {
         .rectangle {
-            width: 380px;
+            width: 350px;
             height: 90px;
         }
 

@@ -27,7 +27,7 @@
     <title>Stack</title>
 </svelte:head>
 
-{#each stacks as s}
+{#each sortedStacks as s}
 
 <StackComponent header={s.header} leftImg={s.leftImg} rightImg={s.rightImg}/>
     <p>

@@ -8,9 +8,10 @@
     }
 </script>
 <script lang="ts">
-    import Projects from "../../components/Projects.svelte";
+    import Projects from "../../components/ProjectComponents/Projects.svelte";
 
     export let projects: {
+        order: string;
         header: string;
         ref: string;
         textColor: string;

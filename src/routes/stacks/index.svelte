@@ -8,8 +8,9 @@
     }
 </script>
 <script lang="ts">
-    import Stack from "../../components/Stack.svelte";
+    import Stack from "../../components/StackComponents/Stack.svelte";
     export let stacks: {
+        order: string;
         header: string;
         leftImg: string;
         rightImg: string;

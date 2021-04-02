@@ -1,5 +1,6 @@
 <script lang="ts">
-    import {projects} from '../routes/about/projects.json'
+    import {projects} from '../../routes/about/projects.json'
+    import Icon from "../Icon.svelte";
 </script>
 
 <style>
@@ -17,13 +18,18 @@
         color: var(--secondary);
         text-align: center;
     }
+    h2 a {
+        color: var(--primary);
+        text-decoration: none;
+    }
     a {
         color: var(--secondary);
     }
 </style>
 
-<h2><a style="color: var(--primary);" href="/projects">Projects</a></h2>
-{#each projects as project}
+<div style="display: flex">
+    <h2><a href="/projects">Projects<Icon title="Click for details" icon="ArrowRight" /></a></h2>
+</div>{#each projects as project}
     <h3><a href={project["ref"]}>{project["Project"]}</a>
         <span>(Languages:</span>
         {#each project["languages"] as language}

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { fade } from 'svelte/transition';
-    import IoIosSunny from 'svelte-icons/io/IoIosSunny.svelte';
-    import IoIosMoon from 'svelte-icons/io/IoIosMoon.svelte';
-    import { createEventDispatcher } from 'svelte';
+    import {fade} from 'svelte/transition';
+    import {createEventDispatcher} from 'svelte';
+    import Icon from "./Icon.svelte";
+
     const dispatch = createEventDispatcher();
     type ColorMode = 'bright' | 'dark';
     let theme: ColorMode = 'dark';
@@ -65,9 +65,9 @@
 >
     <div in:fade>
         {#if theme === 'bright'}
-            <IoIosMoon />
+            <Icon icon="Sun" />
         {:else}
-            <IoIosSunny />
+            <Icon icon="Moon" />
         {/if}
     </div>
 </button>
@@ -87,15 +87,15 @@
         background: var(--primary);
     }
     button > div {
-        height: 1.25rem;
-        width: 1.25rem;
+        height: 2.25rem;
+        width: 2.25rem;
         color: var(--text);
     }
 
     @media screen and (max-width: 600px) {
         button > div {
-            height: 1.15rem;
-            width: 1.15rem;
+            height: 2.25rem;
+            width: 2.25rem;
         }
     }
 </style>

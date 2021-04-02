@@ -3,10 +3,13 @@
 	import logoDark from 'images/DarkRose.svg';
 	import DarkModeButton from "./DarkModeButton.svelte";
 	import DiGithubAlt from 'svelte-icons/di/DiGithubAlt.svelte'
+
+	import { createEventDispatcher } from 'svelte';
+	const dispatch = createEventDispatcher();
+
+
 	export let segment: string;
 	let src: string;
-
-
 	function changeLogo(theme: string) {
 		if (theme === 'dark') {
 			src = logoDark;
@@ -14,9 +17,14 @@
 			src = logoBright;
 		}
 	}
+
 	function handleThemeChange(event: any) {
-		console.log(typeof event);
+		// console.log(typeof event);
 		changeLogo(event.detail.theme);
+		// handDownTheme(event.detail.theme);
+		dispatch('message', {
+			theme: event.detail.theme,
+		});
 	}
 </script>
 <nav>
@@ -115,11 +123,10 @@
 	.linkImg:hover {
 		background: var(--primary);
 	}
-
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 360px) {
 		a.link {
-			font-size: 0.9em;
-			padding: 1em 0.5em;
+			font-size: 12px;
+			padding: .15em .15em;
 			margin: 0 0.125em;
 		}
 
@@ -127,6 +134,27 @@
 			height: 1.25em;
 			width: 1.25em;
 			margin-left: 0.5em;
+			display: none;
+		}
+		.linkImg {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 600px) and (min-width: 375px) {
+		a.link {
+			font-size: .9em;
+			padding: .15em .15em;
+			margin: 0 0.125em;
+		}
+
+		img {
+			height: 1.25em;
+			width: 1.25em;
+			margin-left: 0.5em;
+			display: none;
+		}
+		.linkImg {
+			display: none;
 		}
 	}
 </style>

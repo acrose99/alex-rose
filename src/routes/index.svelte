@@ -1,6 +1,13 @@
 <script>
-	import StackRoll from "../components/StackRoll.svelte";
-	import ProjectRoll from "../components/ProjectRoll.svelte";
+	import StackRoll from "../components/StackComponents/StackRoll.svelte";
+	import ProjectRoll from "../components/ProjectComponents/ProjectRoll.svelte";
+	import Me from "../components/Me.svelte";
+	import { getContext } from 'svelte'
+
+	const theme$ = getContext('theme')
+
+	$: theme = $theme$
+
 </script>
 
 
@@ -9,11 +16,6 @@
 		text-align: center;
 		margin: 20px auto;
 		color: var(--text);
-	}
-	img {
-		margin: 0 auto;
-		height: 200px;
-		display: block;
 	}
 	h3 {
 		text-align: center;
@@ -41,7 +43,7 @@
 
 <h1> Hi. </h1>
 
-<img src="content/alex.png" alt="Alex">
+<Me theme={theme}/>
 
 <h2>
 	My name is Alex <span id="rose">Rose.</span> I live in <span style="color: #5fa8cd">Chicago</span>.

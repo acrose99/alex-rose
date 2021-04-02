@@ -1,5 +1,6 @@
 <script lang="ts">
-    import {stacks} from '../routes/about/stacks.json'
+    import {stacks} from '../../routes/about/stacks.json'
+    import Icon from "../Icon.svelte";
 </script>
 
 <style>
@@ -15,14 +16,16 @@
     }
     a {
         color: var(--primary);
+        text-decoration: none;
     }
     h3  {
         color: var(--secondary);
         text-align: center;
     }
 </style>
-
-<h2><a href="/stacks">Skills</a></h2>
+<div style="display: flex">
+    <h2><a href="/stacks">Skills <Icon title="Click for details" icon="ArrowRight" /></a></h2>
+</div>
 {#each stacks as stack}
     <h3>{stack["stack"]}:
         {#each stack["languages"] as language}
