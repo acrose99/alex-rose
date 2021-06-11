@@ -1,7 +1,7 @@
 ---
 order: 1
 header: History of Computing
-ref: https://history-of-computing.vercel.app/timeline
+ref: https://history-of-computing.vercel.app/
 leftImg: HistoryOfComputing
 rightImg: React
 ---
