@@ -30,10 +30,9 @@
 <style>
 	main {
 		position: relative;
-		background-color: var(--background);
-		padding: 2em;
+		background-color: #8954DE;
+		max-width: 100vw;
 		min-height: 100vh;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>

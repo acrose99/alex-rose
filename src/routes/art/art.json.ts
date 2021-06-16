@@ -49,13 +49,7 @@ export let artwork = {
             "artist": "Unknown",
             "description": "Another of the many murals memorializing MF Doom that are in Logans Square"
         },
-        {
-            "date": "2021-2",
-            "src": "PaintorDie.png",
-            "location": "2015 North Mendell Street",
-            "artist": "Matr",
-            "description": "Part of a collection of graffiti in Bucktown near a cement factory"
-        },
+
         {
             "date": "2021-2",
             "src": "RobotOnion.png",

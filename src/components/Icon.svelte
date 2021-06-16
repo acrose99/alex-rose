@@ -96,8 +96,6 @@
 <style>
     .iconify {
         color: var(--primary);
-        height: 72px;
-        width: 72px;
         display: flex;
         margin: 2% 10%;
         justify-content: center;

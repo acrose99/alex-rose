@@ -4,30 +4,33 @@
 </script>
 
 <div class="rectangle">
-    <div class="inner-rectangle-left" style="transition: all 2s ease 0s">
-        <Icon icon={leftImg}/>
-    </div>
-    <div style="transition: all 2s ease 0s" class="rectangle-mid">
+<!--    <div class="inner-rectangle-left" style="transition: all 2s ease 0s">-->
+<!--        <Icon icon={leftImg}/>-->
+<!--    </div>-->
+    <div style="transition: all 2s ease 0s">
         <a class="rectangle-text" href={ref}>
+<!--            <Icon icon={leftImg}/>-->
             {header}
         </a>
     </div>
-    <div class="inner-rectangle-right" style="transition: all 2s ease 0s" >
-        <Icon icon={rightImg}/>
-    </div>
+<!--    <div class="inner-rectangle-right" style="transition: all 2s ease 0s" >-->
+<!--        <Icon icon={rightImg}/>-->
+<!--    </div>-->
 </div>
 
 <style>
     .rectangle {
         width: 650px;
         height: 80px;
-    }
-    .rectangle {
         /* height: 70px; */
         margin: auto;
         display: flex;
         /* width: 600px; */
-        background-color: var(--background-item);
+        background: var(--background-item);
+        box-shadow: 0px 4px 4px rgba(82, 5, 211, 0.29);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
     }
     .inner-rectangle-left {
         flex-grow: 1;
@@ -38,17 +41,17 @@
         pointer-events: auto;
     }
     .rectangle-mid {
-        width: 80%;
+        /*width: 80%;*/
         display: flex;
         justify-content: center;
     }
-    .rectangle-mid:hover {
-        background-color: var(--primary-hover);
+    .rectangle:hover {
+        background: var(--background-hover);
     }
     .rectangle-text {
         text-align: center;
         font-size: 24px;
-        color: var(--text);
+        color: white;
     }
     .inner-rectangle-right {
         flex-grow: 1;

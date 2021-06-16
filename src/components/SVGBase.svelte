@@ -13,8 +13,8 @@
         stroke: currentColor;
         fill: currentColor;
         stroke-width: 0;
-        height: 72px;
-        width: 72px;
+        height: 36px;
+        width: 36px;
         margin: 2% 10%;
     }
     svg:hover {
