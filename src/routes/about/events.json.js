@@ -39,11 +39,6 @@ export let events = {
             "description": "Was briefly Head of Recruitment for Don't Panic!"
         },
         {
-            "dateStart": "2019-12",
-            "dateEnd": "2020-01",
-            "description": "Went abroad to Ecuador – a wonderful experience!"
-        },
-        {
             "dateStart": "2018-04",
             "description": "Joined Loyola University Chicago as a dual History and Computer Science major. "
         },

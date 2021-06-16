@@ -1,77 +1,87 @@
 export let artwork = {
-    "Me": [
-        {
-            "date": "2020-12",
-            "src": "Rosso the Riveter",
-            "title": "Rosso the Riveter",
-            "description": "Mashup of Porco Rosso (main character of the amazing movie Porco Rosso) and Rosie the Riveter"
-        },
-        {
-            "date": "2021-1",
-            "src": "CalmU",
-            "title": "CalmU",
-            "description": "These are the avatars I made for CalmU, a project I made for a hackathon"
-        },
-        {
-            "date": "2021-1",
-            "src": "Trans Clippy",
-            "title": "Trans Clippy",
-            "description": "I was going to sell this on Redbubble but never got around to it"
-        },
-        {
-            "date": "2021-1",
-            "src": "DoomMasks",
-            "title": "DoomMasks",
-            "description": "I made a mask for each album MF Doom made. RIP"
-        },
-        {
-            "date": "2020-11",
-            "src": "IosIcons",
-            "title": "iFish",
-            "description": "I made a bunch of Fish Themed App Icons for my iPhone after the IOS update. I'll eventually release this on Github or something for the 50 icons I made."
-        },
-    ],
     "Seen": [
         {
-            "date": "2021-1",
-            "src": "DoomMural",
-            "title": "MF Doom (Logans Square)",
-            "description": "One of many murals memorializing MF Doom that are in Logans Square, 5 minutes off the CTA stop"
+            "date": "2021-6",
+            "src": "PaintCan.jpeg",
+            "artist": "Unknown",
+            "location": "5826 North Winthrop Avenue",
+            "description": "One of the newer murals on the wall holding up the Red Line at the Granville station."
+        },
+        {
+            "date": "2021-6",
+            "src": "doctor.jpeg",
+            "artist": "Unknown",
+            "location": "5826 North Winthrop Avenue",
+            "description": "Another of the newer murals on the wall holding up the Red Line at the Granville station."
+        },
+        {
+            "date": "2021-6",
+            "src": "girl.jpeg",
+            "artist": "Unknown",
+            "location": "5826 North Winthrop Avenue",
+            "description": "Yet another of the newer murals on the wall holding up the Red Line at the Granville station."
+        },
+        {
+            "date": "2021-6",
+            "src": "birdheart.jpeg",
+            "artist": "Unknown",
+            "location": "2901 West Irving Park Road",
+            "description": "A mural decorating a liquor store in Irving Park."
+        },
+        {
+            "date": "2021-6",
+            "src": "fortaleza.jpeg",
+            "artist": "Unknown",
+            "location": "438 Dodge Avenue",
+            "description": "A mural decorating Dawes Elementary School in Evanston."
         },
         {
             "date": "2021-1",
-            "src": "DoomMural2",
-            "title": "Doom",
-            "description": "Another of the many murals memorializing MF Doom that are in Logans Square, 5 minutes off the CTA stop"
+            "src": "DoomMural.png",
+            "location": "2940 West Medill Avenue",
+            "artist": "Unknown",
+            "description": "One of many murals memorializing MF Doom that are in Logans Square"
+        },
+        {
+            "date": "2021-1",
+            "src": "DoomMural2.png",
+            "location": "2940 West Medill Avenue",
+            "artist": "Unknown",
+            "description": "Another of the many murals memorializing MF Doom that are in Logans Square"
         },
         {
             "date": "2021-2",
-            "src": "PaintorDie",
-            "title": "Paint or Die (Bucktown)",
+            "src": "PaintorDie.png",
+            "location": "2015 North Mendell Street",
+            "artist": "Matr",
             "description": "Part of a collection of graffiti in Bucktown near a cement factory"
         },
         {
             "date": "2021-2",
-            "src": "RobotOnion",
-            "title": "Robot Onion",
-            "description": "Also in Bucktown"
+            "src": "RobotOnion.png",
+            "artist": "Oinkz",
+            "location": "2015 North Mendell Street",
+            "description": "Part of a collection of murals next to a concrete factory in Bucktown"
         },
         {
             "date": "2021-2",
-            "src": "Delight",
-            "title": "Delight",
-            "description": "On N. Milwaukee Ave near the brown line. Made by the famous artist Key Detail"
+            "src": "Delight.png",
+            "artist": "Key Details",
+            "location": "1890 N Milwaukee Avenue",
+            "description": "Titled Delight, this was made by the famous artist Key Detail for Titan Walls, a mural festival."
         },
         {
             "date": "2020-2",
-            "src": "BirdMural",
-            "title": "Birds",
-            "description": "Part of several bird themed murals in Rogers Park meant to raise awareness for the environment."
+            "src": "BirdMural.png",
+            "artist": "Unknown",
+            "location": "1400 West Greenleaf Avenue",
+            "description": "Part of several bird themed murals in Rogers Park commissioned by the city to raise awareness for the environment."
         },
         {
             "date": "2020-2",
-            "src": "Duck",
-            "title": "Duck",
+            "src": "Duck.png",
+            "artist": "Rubén Aguirre",
+            "location": "1400 West Greenleaf Avenue",
             "description": "Another bird themed mural in Rogers Park meant to raise awareness for the environment."
         },
     ]

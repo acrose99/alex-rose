@@ -2,11 +2,11 @@
     import {artwork} from '../routes/art/art.json'
     import dayjs from 'dayjs';
 
-    const sortedArtMe = artwork["Me"]
-        .sort((a, b) => {
-            if (a["date"] < b["date"]) return 1;
-            else return -1;
-        });
+    // const sortedArtMe = artwork["Me"]
+    //     .sort((a, b) => {
+    //         if (a["date"] < b["date"]) return 1;
+    //         else return -1;
+    //     });
     const sortedArtSeen = artwork["Seen"]
         .sort((a, b) => {
             if (a["date"] < b["date"]) return 1;
@@ -16,12 +16,11 @@
 
 <style>
 
-    h1,h3 {
-        text-align: center;
+    h1 {
         color: var(--primary);
+        text-align: center;
     }
-
-    h3  {
+    h2, h3  {
         color: var(--secondary);
         text-align: center;
     }
@@ -41,20 +40,22 @@
 </style>
 <h1>Some Artwork I've Seen</h1>
 {#each sortedArtSeen as art}
-    <h3>{art["title"]}:
+    <h1>
         {dayjs(art["date"]).format('MMMM YYYY')}
-    </h3>
-    <img src={`content/art/${art.src}.png`} alt={art["title"]}>
+    </h1>
+    <h2>Artist: {art["artist"]}</h2>
+    <img src={`content/art/${art.src}`} alt={art["title"]}>
+    <p>Location: {art["location"]}</p>
     <p>{art["description"]}</p>
 
 {/each}
 
-<h1>My Artwork</h1>
-{#each sortedArtMe as art}
-    <h3>{art["title"]}:
-                {dayjs(art["date"]).format('MMMM YYYY')}
-    </h3>
-    <img src={`content/art/${art.src}.png`} alt={art["title"]}>
-    <p>{art["description"]}</p>
+<!--<h1>My Artwork</h1>-->
+<!--{#each sortedArtMe as art}-->
+<!--    <h3>{art["title"]}:-->
+<!--                {dayjs(art["date"]).format('MMMM YYYY')}-->
+<!--    </h3>-->
+<!--    <img src={`content/art/${art.src}.png`} alt={art["title"]}>-->
+<!--    <p>{art["description"]}</p>-->
 
-{/each}
+<!--{/each}-->
